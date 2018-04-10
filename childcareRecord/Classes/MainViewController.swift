@@ -12,17 +12,26 @@ import GoogleMobileAds
 class MainViewController: UIViewController {
 
     @IBOutlet var bannerView: GADBannerView!
+    @IBOutlet var settingButton: UIButton!
     
+    // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bannerView.adUnitID = AdSettings.unitID
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        
+        settingButton.addTarget(self, action: #selector(onTapSettingButton), for: .touchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    // MARK: - @objc function
+    @objc private func onTapSettingButton() {
+        let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "settingVC") as! SettingViewController
+        present(settingVC, animated: true, completion: nil)
+    }
 }
-

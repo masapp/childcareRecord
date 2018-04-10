@@ -15,7 +15,13 @@
 		7B1A7AAE207C52D20052D744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1A7AAC207C52D20052D744 /* LaunchScreen.storyboard */; };
 		7B1A7AB8207C53140052D744 /* AdSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1A7AB7207C53140052D744 /* AdSettings.swift */; };
 		7B5EB323207C54C2006E0919 /* Defaults-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5EB322207C54C2006E0919 /* Defaults-Landscape.png */; };
-		7B5EB325207C57C8006E0919 /* setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5EB324207C57C8006E0919 /* setting@3x.png */; };
+		7B5EB325207C57C8006E0919 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5EB324207C57C8006E0919 /* setting.png */; };
+		7B5EB327207C5C50006E0919 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB326207C5C50006E0919 /* SettingViewController.swift */; };
+		7B5EB32A207C7246006E0919 /* NotificationSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB329207C7246006E0919 /* NotificationSettingCell.swift */; };
+		7B5EB32C207C7254006E0919 /* IntervalSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB32B207C7254006E0919 /* IntervalSettingCell.swift */; };
+		7B5EB32F207C76E0006E0919 /* UserDefaults+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB32E207C76E0006E0919 /* UserDefaults+Utils.swift */; };
+		7B5EB331207C89FE006E0919 /* PickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB330207C89FE006E0919 /* PickerViewCell.swift */; };
+		7B5EB333207CA7E0006E0919 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5EB332207CA7E0006E0919 /* history.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +35,13 @@
 		7B1A7AAF207C52D20052D744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B1A7AB7207C53140052D744 /* AdSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdSettings.swift; sourceTree = "<group>"; };
 		7B5EB322207C54C2006E0919 /* Defaults-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Defaults-Landscape.png"; sourceTree = "<group>"; };
-		7B5EB324207C57C8006E0919 /* setting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting@3x.png"; sourceTree = "<group>"; };
+		7B5EB324207C57C8006E0919 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		7B5EB326207C5C50006E0919 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		7B5EB329207C7246006E0919 /* NotificationSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingCell.swift; sourceTree = "<group>"; };
+		7B5EB32B207C7254006E0919 /* IntervalSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalSettingCell.swift; sourceTree = "<group>"; };
+		7B5EB32E207C76E0006E0919 /* UserDefaults+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Utils.swift"; sourceTree = "<group>"; };
+		7B5EB330207C89FE006E0919 /* PickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewCell.swift; sourceTree = "<group>"; };
+		7B5EB332207CA7E0006E0919 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
 		BE5545381C474F9FFF579AF4 /* Pods_childcareRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_childcareRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0BDBDB4ADBC346E23F04E98 /* Pods-childcareRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-childcareRecord.release.xcconfig"; path = "Pods/Target Support Files/Pods-childcareRecord/Pods-childcareRecord.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,8 +100,11 @@
 		7B1A7AB5207C52FA0052D744 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7B5EB32D207C76D0006E0919 /* Extension */,
+				7B5EB328207C7231006E0919 /* SettingCell */,
 				7B1A7AA3207C52D20052D744 /* AppDelegate.swift */,
 				7B1A7AA5207C52D20052D744 /* MainViewController.swift */,
+				7B5EB326207C5C50006E0919 /* SettingViewController.swift */,
 				7B1A7AB6207C53000052D744 /* Constant */,
 			);
 			path = Classes;
@@ -106,10 +121,29 @@
 		7B5EB321207C54B1006E0919 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7B5EB324207C57C8006E0919 /* setting@3x.png */,
+				7B5EB332207CA7E0006E0919 /* history.png */,
+				7B5EB324207C57C8006E0919 /* setting.png */,
 				7B5EB322207C54C2006E0919 /* Defaults-Landscape.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B5EB328207C7231006E0919 /* SettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				7B5EB329207C7246006E0919 /* NotificationSettingCell.swift */,
+				7B5EB32B207C7254006E0919 /* IntervalSettingCell.swift */,
+				7B5EB330207C89FE006E0919 /* PickerViewCell.swift */,
+			);
+			path = SettingCell;
+			sourceTree = "<group>";
+		};
+		7B5EB32D207C76D0006E0919 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7B5EB32E207C76E0006E0919 /* UserDefaults+Utils.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FCAF8BD0BB974CBAF1279E50 /* Pods */ = {
@@ -186,8 +220,9 @@
 				7B1A7AAE207C52D20052D744 /* LaunchScreen.storyboard in Resources */,
 				7B5EB323207C54C2006E0919 /* Defaults-Landscape.png in Resources */,
 				7B1A7AAB207C52D20052D744 /* Assets.xcassets in Resources */,
+				7B5EB333207CA7E0006E0919 /* history.png in Resources */,
 				7B1A7AA9207C52D20052D744 /* Main.storyboard in Resources */,
-				7B5EB325207C57C8006E0919 /* setting@3x.png in Resources */,
+				7B5EB325207C57C8006E0919 /* setting.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,9 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5EB331207C89FE006E0919 /* PickerViewCell.swift in Sources */,
 				7B1A7AA6207C52D20052D744 /* MainViewController.swift in Sources */,
+				7B5EB32C207C7254006E0919 /* IntervalSettingCell.swift in Sources */,
 				7B1A7AA4207C52D20052D744 /* AppDelegate.swift in Sources */,
 				7B1A7AB8207C53140052D744 /* AdSettings.swift in Sources */,
+				7B5EB32F207C76E0006E0919 /* UserDefaults+Utils.swift in Sources */,
+				7B5EB32A207C7246006E0919 /* NotificationSettingCell.swift in Sources */,
+				7B5EB327207C5C50006E0919 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
