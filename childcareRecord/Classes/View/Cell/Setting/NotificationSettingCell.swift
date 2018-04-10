@@ -23,5 +23,6 @@ class NotificationSettingCell: UITableViewCell {
     // MARK: - @objc function
     @objc private func changeSwitch(_ sender: UISwitch) {
         defaults.isNotificationEnabled = sender.isOn
+        NotificationCenter.default.post(name: .switchChange, object: nil)
     }
 }

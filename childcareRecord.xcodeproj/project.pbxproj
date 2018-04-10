@@ -22,6 +22,8 @@
 		7B5EB32F207C76E0006E0919 /* UserDefaults+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB32E207C76E0006E0919 /* UserDefaults+Utils.swift */; };
 		7B5EB331207C89FE006E0919 /* PickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB330207C89FE006E0919 /* PickerViewCell.swift */; };
 		7B5EB333207CA7E0006E0919 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5EB332207CA7E0006E0919 /* history.png */; };
+		7B5EB337207CB086006E0919 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB336207CB086006E0919 /* HistoryViewController.swift */; };
+		7B5EB339207CB9D4006E0919 /* Notification+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB338207CB9D4006E0919 /* Notification+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		7B5EB32E207C76E0006E0919 /* UserDefaults+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Utils.swift"; sourceTree = "<group>"; };
 		7B5EB330207C89FE006E0919 /* PickerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewCell.swift; sourceTree = "<group>"; };
 		7B5EB332207CA7E0006E0919 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		7B5EB336207CB086006E0919 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		7B5EB338207CB9D4006E0919 /* Notification+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Utils.swift"; sourceTree = "<group>"; };
 		BE5545381C474F9FFF579AF4 /* Pods_childcareRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_childcareRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0BDBDB4ADBC346E23F04E98 /* Pods-childcareRecord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-childcareRecord.release.xcconfig"; path = "Pods/Target Support Files/Pods-childcareRecord/Pods-childcareRecord.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,11 +104,9 @@
 		7B1A7AB5207C52FA0052D744 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7B5EB335207CB070006E0919 /* View */,
 				7B5EB32D207C76D0006E0919 /* Extension */,
-				7B5EB328207C7231006E0919 /* SettingCell */,
 				7B1A7AA3207C52D20052D744 /* AppDelegate.swift */,
-				7B1A7AA5207C52D20052D744 /* MainViewController.swift */,
-				7B5EB326207C5C50006E0919 /* SettingViewController.swift */,
 				7B1A7AB6207C53000052D744 /* Constant */,
 			);
 			path = Classes;
@@ -128,22 +130,42 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7B5EB328207C7231006E0919 /* SettingCell */ = {
+		7B5EB328207C7231006E0919 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				7B5EB329207C7246006E0919 /* NotificationSettingCell.swift */,
-				7B5EB32B207C7254006E0919 /* IntervalSettingCell.swift */,
-				7B5EB330207C89FE006E0919 /* PickerViewCell.swift */,
+				7B5EB334207CB058006E0919 /* Setting */,
 			);
-			path = SettingCell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		7B5EB32D207C76D0006E0919 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				7B5EB32E207C76E0006E0919 /* UserDefaults+Utils.swift */,
+				7B5EB338207CB9D4006E0919 /* Notification+Utils.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		7B5EB334207CB058006E0919 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				7B5EB329207C7246006E0919 /* NotificationSettingCell.swift */,
+				7B5EB32B207C7254006E0919 /* IntervalSettingCell.swift */,
+				7B5EB330207C89FE006E0919 /* PickerViewCell.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		7B5EB335207CB070006E0919 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B5EB328207C7231006E0919 /* Cell */,
+				7B1A7AA5207C52D20052D744 /* MainViewController.swift */,
+				7B5EB326207C5C50006E0919 /* SettingViewController.swift */,
+				7B5EB336207CB086006E0919 /* HistoryViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FCAF8BD0BB974CBAF1279E50 /* Pods */ = {
@@ -285,8 +307,10 @@
 				7B1A7AA6207C52D20052D744 /* MainViewController.swift in Sources */,
 				7B5EB32C207C7254006E0919 /* IntervalSettingCell.swift in Sources */,
 				7B1A7AA4207C52D20052D744 /* AppDelegate.swift in Sources */,
+				7B5EB339207CB9D4006E0919 /* Notification+Utils.swift in Sources */,
 				7B1A7AB8207C53140052D744 /* AdSettings.swift in Sources */,
 				7B5EB32F207C76E0006E0919 /* UserDefaults+Utils.swift in Sources */,
+				7B5EB337207CB086006E0919 /* HistoryViewController.swift in Sources */,
 				7B5EB32A207C7246006E0919 /* NotificationSettingCell.swift in Sources */,
 				7B5EB327207C5C50006E0919 /* SettingViewController.swift in Sources */,
 			);

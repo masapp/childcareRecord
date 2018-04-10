@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet var bannerView: GADBannerView!
     @IBOutlet var settingButton: UIButton!
+    @IBOutlet var historyButton: UIButton!
     
     // MARK: - UIViewController
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class MainViewController: UIViewController {
         bannerView.load(GADRequest())
         
         settingButton.addTarget(self, action: #selector(onTapSettingButton), for: .touchUpInside)
+        historyButton.addTarget(self, action: #selector(onTapHistoryButton), for: .touchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,5 +35,9 @@ class MainViewController: UIViewController {
     @objc private func onTapSettingButton() {
         let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "settingVC") as! SettingViewController
         present(settingVC, animated: true, completion: nil)
+    }
+    
+    @objc private func onTapHistoryButton() {
+        
     }
 }

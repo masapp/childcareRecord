@@ -39,5 +39,6 @@ class PickerViewCell: UITableViewCell, UIPickerViewDataSource, UIPickerViewDeleg
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         defaults.interval = row
+        NotificationCenter.default.post(name: .pickerChange, object: nil)
     }
 }
