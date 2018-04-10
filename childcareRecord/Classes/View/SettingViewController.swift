@@ -35,16 +35,12 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         closeButton.target = self
         closeButton.action = #selector(onTapClose)
         
-        NotificationCenter.default.addObserver(
-            forName: .switchChange,
-            object: nil,
-            queue: OperationQueue.main,
-            using: { _ in
-                let pickerIndexPath = IndexPath(row: 2, section: 0)
-                if let _ = self.tableView.cellForRow(at: pickerIndexPath) {
-                    self.numRows = 2
-                    self.tableView.deleteRows(at: [pickerIndexPath], with: .automatic)
-                }
+        NotificationCenter.default.addObserver(forName: .switchChange, object: nil, queue: OperationQueue.main, using: { _ in
+            let pickerIndexPath = IndexPath(row: 2, section: 0)
+            if let _ = self.tableView.cellForRow(at: pickerIndexPath) {
+                self.numRows = 2
+                self.tableView.deleteRows(at: [pickerIndexPath], with: .automatic)
+            }
         })
     }
     
