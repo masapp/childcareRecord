@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="childcareRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxo-kn-IA7">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehk-7S-bBt" customClass="GADBannerView">
+                                        <rect key="frame" x="27" y="0.0" width="320" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="bkv-9E-ET4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="E4B-If-co4"/>
+                                    <constraint firstItem="Ehk-7S-bBt" firstAttribute="top" secondItem="Cxo-kn-IA7" secondAttribute="top" id="d7G-kY-z0h"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ehk-7S-bBt" secondAttribute="bottom" id="fZ0-7T-rph"/>
+                                    <constraint firstItem="Ehk-7S-bBt" firstAttribute="centerX" secondItem="Cxo-kn-IA7" secondAttribute="centerX" id="l5L-6W-fqW"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EW-eh-VcM">
+                                <rect key="frame" x="325" y="20" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hhw-2T-gDn"/>
+                                    <constraint firstAttribute="width" constant="40" id="xgq-OQ-Lpf"/>
+                                </constraints>
+                                <state key="normal" image="setting.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cxo-kn-IA7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8Az-eS-l2a"/>
+                            <constraint firstItem="4EW-eh-VcM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Uxi-cZ-ms0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4EW-eh-VcM" secondAttribute="trailing" constant="10" id="e7O-8q-ghV"/>
+                            <constraint firstItem="Cxo-kn-IA7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qP3-p0-oJM"/>
+                            <constraint firstItem="Cxo-kn-IA7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="thN-3Z-a95"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="Ehk-7S-bBt" id="HX3-Hd-K2R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="setting.png" width="20" height="20"/>
+    </resources>
+</document>
