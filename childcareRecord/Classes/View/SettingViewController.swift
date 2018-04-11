@@ -31,6 +31,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableFooterView = UIView()
         
         closeButton.target = self
         closeButton.action = #selector(onTapClose)
@@ -92,7 +93,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 2 {
-            return 90
+            return 100
         }
         return 44
     }

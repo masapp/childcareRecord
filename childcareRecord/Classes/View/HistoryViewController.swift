@@ -9,9 +9,11 @@
 import UIKit
 import GoogleMobileAds
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet var bannerView: GADBannerView!
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var closeButton: UIBarButtonItem!
     
     // MARK: - UIViewController
     override func viewDidLoad() {
@@ -20,9 +22,32 @@ class HistoryViewController: UIViewController {
         bannerView.adUnitID = AdSettings.unitID
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        
+        tableView.dataSource = self
+        
+        closeButton.target = self
+        closeButton.action = #selector(onTapClose)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: - UITableViewDataSource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    // MARK: - @objc function
+    @objc private func onTapClose() {
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -29,4 +29,24 @@ extension UserDefaults {
             self.synchronize()
         }
     }
+    
+    var todayHistory: [String] {
+        get {
+            return self.array(forKey: "today") as! [String]
+        }
+        set(value) {
+            self.set(value, forKey: "today")
+            self.synchronize()
+        }
+    }
+    
+    var yesterdayHistory: [String] {
+        get {
+            return self.array(forKey: "yesterday") as! [String]
+        }
+        set(value) {
+            self.set(value, forKey: "yesterday")
+            self.synchronize()
+        }
+    }
 }

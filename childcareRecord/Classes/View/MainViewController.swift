@@ -33,11 +33,12 @@ class MainViewController: UIViewController {
     
     // MARK: - @objc function
     @objc private func onTapSettingButton() {
-        let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "settingVC") as! SettingViewController
+        let settingVC = storyboard?.instantiateViewController(withIdentifier: "settingVC") as! SettingViewController
         present(settingVC, animated: true, completion: nil)
     }
     
     @objc private func onTapHistoryButton() {
-        
+        let historyVC = storyboard?.instantiateViewController(withIdentifier: "historyVC") as! HistoryViewController
+        present(historyVC, animated: true, completion: nil)
     }
 }
