@@ -51,20 +51,6 @@ class MainViewController: UIViewController {
             defaults.beforeUpdateTime = defaults.lastUpdateTime
             defaults.lastUpdateTime = today
         }
-        
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.badge, .sound, .alert], completionHandler: { (granted, error) in
-            if error != nil {
-                return
-            }
-            
-            if granted {
-                self.defaults.isNotificationEnabled = true
-                
-            } else {
-                self.defaults.isNotificationEnabled = false
-            }
-        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -153,12 +139,13 @@ class MainViewController: UIViewController {
     }
     
     private func setLocalNotification() {
+        let interval = defaults.interval + 1
         let content = UNMutableNotificationContent()
         content.title = NotificationSettings.title
-        content.body = "\(defaults.interval) \(NotificationSettings.body)"
+        content.body = "\(interval) \(NotificationSettings.body)"
         content.sound = UNNotificationSound.default()
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(defaults.interval * 60 * 60), repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(interval * 60 * 60), repeats: false)
         let request = UNNotificationRequest(identifier: "LocalNoti", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)

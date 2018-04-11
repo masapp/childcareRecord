@@ -320,6 +320,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="notiSwitch" destination="KPG-Ft-JeW" id="p8B-91-nqu"/>
+                                            <outlet property="titleLabel" destination="HMq-8c-UTC" id="4gt-gz-ZFe"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="interval" id="CVQ-7e-Kj2" customClass="IntervalSettingCell" customModule="childcareRecord" customModuleProvider="target">
