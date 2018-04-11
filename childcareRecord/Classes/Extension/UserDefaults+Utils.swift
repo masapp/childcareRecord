@@ -30,23 +30,32 @@ extension UserDefaults {
         }
     }
     
-    var todayHistory: [String] {
+    var lastUpdateTime: String {
         get {
-            return self.array(forKey: "today") as! [String]
+            return self.string(forKey: "lastUpdate") ?? ""
         }
         set(value) {
-            self.set(value, forKey: "today")
+            self.set(value, forKey: "lastUpdate")
             self.synchronize()
         }
     }
     
-    var yesterdayHistory: [String] {
+    var beforeUpdateTime: String {
         get {
-            return self.array(forKey: "yesterday") as! [String]
+            return self.string(forKey: "beforeUpdate") ?? ""
         }
         set(value) {
-            self.set(value, forKey: "yesterday")
+            self.set(value, forKey: "beforeUpdate")
             self.synchronize()
         }
+    }
+    
+    func getHistory(key: String) -> [String] {
+        return self.array(forKey: key) as? [String] ?? []
+    }
+    
+    func setHistory(key: String, value: [String]) {
+        self.set(value, forKey: key)
+        self.synchronize()
     }
 }
