@@ -6,10 +6,17 @@
 //  Copyright © 2018 masapp. All rights reserved.
 //
 
+import UIKit
+
 struct NotificationSettings {
-    static let title = "Time lapse notification"
-    static let body = "hours have passed since last time."
+    static let title = NSLocalizedString("notititle", comment: "")
+    static let body = NSLocalizedString("notibody", comment: "")
     static let pickerList = [
-        "1hour", "2hour", "3hour", "4hour", "5hour", "6hour"
+        NSLocalizedString("1hour", comment: ""),
+        NSLocalizedString("2hour", comment: ""),
+        NSLocalizedString("3hour", comment: ""),
+        NSLocalizedString("4hour", comment: ""),
+        NSLocalizedString("5hour", comment: ""),
+        NSLocalizedString("6hour", comment: "")
     ]
 }

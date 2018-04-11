@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  childcareRecord
+
+  Created by 石川 雅之 on 2018/04/11.
+  Copyright © 2018 masapp. All rights reserved.
+*/
+
+"Milk" = "ミルク";
+"Diapers" = "オムツ";
+"notititle" = "時間経過通知";
+"notibody" = "時間が経過しました。";
+"1hour" = "1時間";
+"2hour" = "2時間";
+"3hour" = "3時間";
+"4hour" = "4時間";
+"5hour" = "5時間";
+"6hour" = "6時間";

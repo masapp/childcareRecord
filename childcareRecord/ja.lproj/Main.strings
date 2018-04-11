@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Times"; ObjectID = "GYC-ig-jkL"; */
+"GYC-ig-jkL.text" = "回";
+
+/* Class = "UILabel"; text = "Notification"; ObjectID = "HMq-8c-UTC"; */
+"HMq-8c-UTC.text" = "通知";
+
+/* Class = "UILabel"; text = "Last"; ObjectID = "Ijf-KR-vMB"; */
+"Ijf-KR-vMB.text" = "前回";
+
+/* Class = "UILabel"; text = "999"; ObjectID = "MhF-b3-K8A"; */
+"MhF-b3-K8A.text" = "999";
+
+/* Class = "UINavigationItem"; title = "History"; ObjectID = "OPr-0D-ZFf"; */
+"OPr-0D-ZFf.title" = "履歴";
+
+/* Class = "UILabel"; text = "Last"; ObjectID = "QGg-nB-ZEl"; */
+"QGg-nB-ZEl.text" = "前回";
+
+/* Class = "UILabel"; text = "23:59:59"; ObjectID = "UEg-07-pt3"; */
+"UEg-07-pt3.text" = "23:59:59";
+
+/* Class = "UILabel"; text = "23:59:59"; ObjectID = "YWi-qG-6R2"; */
+"YWi-qG-6R2.text" = "23:59:59";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Yvo-uD-Wcf"; */
+"Yvo-uD-Wcf.text" = "Label";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "aRY-aL-MnY"; */
+"aRY-aL-MnY.text" = "本日";
+
+/* Class = "UILabel"; text = "999"; ObjectID = "bDg-Mk-dMu"; */
+"bDg-Mk-dMu.text" = "999";
+
+/* Class = "UINavigationItem"; title = "Setting"; ObjectID = "dvz-pi-gft"; */
+"dvz-pi-gft.title" = "設定";
+
+/* Class = "UILabel"; text = "3hour"; ObjectID = "erG-gZ-w1d"; */
+"erG-gZ-w1d.text" = "3hour";
+
+/* Class = "UILabel"; text = "Times"; ObjectID = "fHs-Xw-Wwb"; */
+"fHs-Xw-Wwb.text" = "回";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "hBe-Zo-zzk"; */
+"hBe-Zo-zzk.text" = "本日";
+
+/* Class = "UILabel"; text = "Interval"; ObjectID = "kdk-Yb-qOI"; */
+"kdk-Yb-qOI.text" = "間隔";

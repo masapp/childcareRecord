@@ -95,6 +95,6 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         beforeHistories = defaults.getHistory(key: "before\(type)")
         sectionTitles = [defaults.lastUpdateTime, defaults.beforeUpdateTime]
         
-        navigationTitle = type
+        navigationTitle = NSLocalizedString(type, comment: "")
     }
 }
