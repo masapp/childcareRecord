@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 import GoogleMobileAds
 
 class MainViewController: UIViewController {
@@ -50,6 +51,20 @@ class MainViewController: UIViewController {
             defaults.beforeUpdateTime = defaults.lastUpdateTime
             defaults.lastUpdateTime = today
         }
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.badge, .sound, .alert], completionHandler: { (granted, error) in
+            if error != nil {
+                return
+            }
+            
+            if granted {
+                self.defaults.isNotificationEnabled = true
+                
+            } else {
+                self.defaults.isNotificationEnabled = false
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,6 +95,10 @@ class MainViewController: UIViewController {
         defaults.setHistory(key: "todayMilk", value: history)
         
         setMilkLabel()
+        
+        if defaults.isNotificationEnabled {
+            setLocalNotification()
+        }
     }
     
     @objc private func onTapDiapersButton() {
@@ -131,5 +150,17 @@ class MainViewController: UIViewController {
         f.dateStyle = .none
         f.timeStyle = .short
         return f.string(from: Date())
+    }
+    
+    private func setLocalNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = NotificationSettings.title
+        content.body = "\(defaults.interval) \(NotificationSettings.body)"
+        content.sound = UNNotificationSound.default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(defaults.interval * 60 * 60), repeats: false)
+        let request = UNNotificationRequest(identifier: "LocalNoti", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
 }

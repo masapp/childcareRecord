@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class NotificationSettingCell: UITableViewCell {
     
@@ -24,5 +25,9 @@ class NotificationSettingCell: UITableViewCell {
     @objc private func changeSwitch(_ sender: UISwitch) {
         defaults.isNotificationEnabled = sender.isOn
         NotificationCenter.default.post(name: .switchChange, object: nil)
+        
+        if !sender.isOn {
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        }
     }
 }

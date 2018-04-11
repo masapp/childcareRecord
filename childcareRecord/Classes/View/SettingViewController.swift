@@ -15,9 +15,6 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet var tableView: UITableView!
     @IBOutlet var closeButton: UIBarButtonItem!
     
-    private let pickerList = [
-        "1hour", "2hour", "3hour", "4hour", "5hour", "6hour"
-    ]
     private let defaults = UserDefaults.standard
     private var numRows = 2
     
@@ -62,11 +59,11 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "interval") as! IntervalSettingCell
-            cell.setup(pickerList)
+            cell.setup(NotificationSettings.pickerList)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "pickerView") as! PickerViewCell
-            cell.setup(pickerList)
+            cell.setup(NotificationSettings.pickerList)
             return cell
         default:
             return UITableViewCell()
@@ -85,7 +82,7 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
             } else {
                 numRows = 2
                 let intervalCell = tableView.cellForRow(at: indexPath) as! IntervalSettingCell
-                intervalCell.intervalLabel.text = pickerList[defaults.interval]
+                intervalCell.intervalLabel.text = NotificationSettings.pickerList[defaults.interval]
                 tableView.deleteRows(at: [pickerIndexPath], with: .automatic)
             }
         }
