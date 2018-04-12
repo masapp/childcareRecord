@@ -8,6 +8,7 @@
 
 "Milk" = "ミルク";
 "Diapers" = "オムツ";
+"defaultTime" = "--:--";
 "notititle" = "時間経過通知";
 "notibody" = "時間が経過しました。";
 "1hour" = "1時間";

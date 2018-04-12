@@ -8,6 +8,7 @@
 
 "Milk" = "Milk";
 "Diapers" = "Diapers";
+"defaultTime" = "--:-- AM";
 "notititle" = "Time lapse notification";
 "notibody" = "hours have passed since last time.";
 "1hour" = "1hour";

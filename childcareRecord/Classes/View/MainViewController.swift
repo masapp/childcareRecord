@@ -36,21 +36,21 @@ class MainViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
-        setup()
-        setMilkLabel()
-        setDiapersLabel()
-        
         today = getToday()
         let lastUpdateTime = defaults.lastUpdateTime
         // 日付の更新
         if today != lastUpdateTime {
-            defaults.setHistory(key: "beforeMilk", value: defaults.getHistory(key: "beforeMilk"))
-            defaults.setHistory(key: "beforeDiapers", value: defaults.getHistory(key: "beforeDiapers"))
+            defaults.setHistory(key: "beforeMilk", value: defaults.getHistory(key: "todayMilk"))
+            defaults.setHistory(key: "beforeDiapers", value: defaults.getHistory(key: "todayDiapers"))
             defaults.setHistory(key: "todayMilk", value: [])
             defaults.setHistory(key: "todayDiapers", value: [])
             defaults.beforeUpdateTime = defaults.lastUpdateTime
             defaults.lastUpdateTime = today
         }
+        
+        setup()
+        setMilkLabel()
+        setDiapersLabel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -115,13 +115,13 @@ class MainViewController: UIViewController {
     private func setMilkLabel() {
         let history = defaults.getHistory(key: "todayMilk")
         milkCountLabel.text = String(history.count)
-        milkTimeLabel.text = history.count > 0 ? history[0] : "--:-- AM"
+        milkTimeLabel.text = history.count > 0 ? history[0] : NSLocalizedString("defaultTime", comment: "")
     }
     
     private func setDiapersLabel() {
         let history = defaults.getHistory(key: "todayDiapers")
         diapersCountLabel.text = String(history.count)
-        diapersTimeLabel.text = history.count > 0 ? history[0] : "--:-- AM"
+        diapersTimeLabel.text = history.count > 0 ? history[0] : NSLocalizedString("defaultTime", comment: "")
     }
     
     private func getToday() -> String {
